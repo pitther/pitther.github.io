@@ -1,0 +1,145 @@
+body{
+    background-color: #212529;
+
+}
+
+#invalidReasonDiv {
+    word-break: break-all;
+    -webkit-transition: all 0.5s ease; /* Safari */
+    transition: all 0.5s ease;
+}
+
+#tipDiv {
+    word-break: break-all;
+    background-color: #17a2b8;
+}
+
+.sets{
+    margin-right: 10px;
+}
+
+
+.oper-container{
+
+}
+
+.container{
+    max-width: 100%;
+}
+
+#inputExpression{
+    width: 320px;
+}
+
+.navbar-collapse.collapse {
+    display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+
+.navbar-right {
+    float: right!important;
+}
+
+#inputExpression{
+    background: transparent;
+    color: #f8f9fa;
+    border-color: #17a2b8;
+    height: 35px;
+}
+
+#settingsOpenedContainer{
+    width: 100%;
+
+}
+
+#nav{
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+#settingsNav{
+    display: none;
+}
+
+#settingsNav{
+    animation-name: open;
+    animation-duration: .1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open {
+    from {display:block; opacity: 0;}
+    to {opacity: 1; }
+}
+
+@keyframes close {
+    from {display:block; opacity: 1;}
+    to {opacity: 0;}
+}
+
+#EQ{
+    /*margin-right: 10px;*/
+}
+
+.lbrb{
+    display: inline-block;
+}
+
+.nb{
+    max-width: 209px;
+}
+
+#invalidReasonDiv{
+    max-width: 400px;
+}
+
+#tipDiv{
+    max-width: 400px;
+}
+
+.additional{
+    display: block;
+    max-width: 400px;
+    height: 30px;
+}
+
+
+.opers{
+
+    width: 59.9px;
+    height: 30px;
+    padding: 0;
+
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px  !important;
+    margin-bottom: 0px  !important;
+}
+
+
+#lb, #rb{
+    width: 27px;
+}
+
+.fstrow{
+
+}
+
+.table-header{
+    width: 100px;
+    height: 100px;
+    background: white;
+}
+
+#tableAd{
+
+}
+
