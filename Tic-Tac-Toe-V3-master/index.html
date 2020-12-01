@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Игра крестики нолики на двоих.">
+		<meta name="keywords" content="Игра, на двоих, крестики, нолики, крестики нолики">
+		<link rel="stylesheet" type="text/css" href = "style.css"> 
+		<link rel="SHORTCUT ICON" href="images/icon.ico" type="image/ico">
+	</head>	
+	<body>
+		<div class="container">	
+		<div id="hideField">
+		<div id="buttonBackToMenu" onclick="backToMenu()">
+		</div>
+		<div id="resetGame" onclick="resetGame()">
+		</div>
+		<div id="scoreCounter">0 : 0</div>
+			<div id="gameField">
+				    <div id="field_0" onclick="step(0)" onmouseover="hover(0)">
+					</div>
+					<div id="field_1" onclick="step(1)">
+					</div>
+					<div id="field_2" onclick="step(2)">
+					</div>
+					<div id="field_3" onclick="step(3)">
+					</div>
+					<div id="field_4" onclick="step(4)">
+					</div>
+					<div id="field_5" onclick="step(5)">
+					</div>
+					<div id="field_6" onclick="step(6)">
+					</div>
+					<div id="field_7" onclick="step(7)">
+					</div>
+					<div id="field_8" onclick="step(8)">
+					</div>
+			</div>
+			<div id="playersTurnDivDialog">
+				<div id="playersTurnDiv">
+					<p id="playersTurn">Player <span id="player">Х</span> turn</p>
+				</div>
+				</div>
+			</div>
+
+			<div id="dialog-container">
+				<div id="dialog">
+						<span id="dialog-h1">Hello</span>
+						<hr>
+						<span id="inner-dialog-text">
+							<p id="inner-dialog-text">Welcome to mine first browser game</p>	
+						</span>
+						<div id="description-div">
+							<span id="description">Browser game for two players. Simple and classic game that played by 	millions of people around the world.</span>
+						</div>
+						<hr>						
+						<div id="PVPbutton" onclick="desidePVP()">
+							<span id="PVEtext">PVP</span>
+						</div>
+						<div id="PVEbutton" onclick="desidePVE()">
+							<span id="PVPtext">PVE</span>
+						</div>
+						<div id="startButton" onclick="start()">
+							<div id="innerButtonText">
+								<span id="start">START</span>	
+							</div>
+						</div>
+						<div id="helper">
+						<span>*press 'start' button to start game</span>
+						</div>
+						<div id="soc-div">
+							<a href="https://twitter.com/cornman_" title="Twitter" target="blank">
+								<img id="twitter-icon" src="images/twitter.svg">
+							</a>
+							<a href="https://vk.com/petrovsiychuk" title="Vk" target="blank">
+								<img id="vk-icon" src="images/vk.svg">
+							</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="script.js">
+	</script>
+	</body>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-82478814-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</html>
+

@@ -1,0 +1,147 @@
+body{
+	background: url(images/shattered.png);
+}
+.container{
+	margin-top: 5%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#score{
+	background: #d9d9d9;
+	color: white;
+	border: 2px #cccccc;
+	width: 40px;
+	font-size: 30px;
+	font-family: Fixed, monospace;
+}
+
+#score-r{
+	color: #ff3d3d;
+}
+
+#score-b{
+	color: #444444;
+}
+
+#player_turn{
+	background: #d9d9d9;
+	color: #ff3d3d;
+	border: 2px #cccccc;
+	width: 40px;
+	font-size: 30px;
+	font-family: Fixed, monospace;
+}
+
+.field{
+	-webkit-user-select: none;
+	margin-top: 20px;
+	display: inline-block;
+	width: 640px;
+	height: 640px;
+	border:  5px outset;
+}
+
+.hl{
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+.hl-t{
+	background: url(images/highlight-yellow.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.hl-b{
+	background: url(images/highlight-red.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.hl-p{
+	background: url(images/highlight-green.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+.cell_container{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+
+.cell-none{
+	background: none;
+	width: 80px;
+	height: 80px;
+}
+
+.cell-red{
+	background: url(images/red.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+.cell-black{
+	background: url(images/black.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+.cell-k-black{
+	background: url(images/black-king.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+.cell-k-red{
+	background: url(images/red-king.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+}
+
+
+.panel{
+	float: left;
+	top: -40px;
+	position: absolute;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.btn_restart{
+	cursor: pointer;
+	background-color: #d9d9d9;
+	background-image: url(images/icon.svg);
+	background-size: cover;	
+	width: 40px;
+	height: 40px;
+}
+
+.btn_inf{
+	margin-top: -40px;
+	margin-right: 20px;
+	float: right;
+	cursor: pointer;
+	background-color: #d9d9d9;
+	background-image: url(images/share.svg);
+	background-size: cover;	
+	width: 40px;
+	height: 40px;
+}

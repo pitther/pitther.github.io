@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="lib/p5.min.js"></script>
+  <script src="class/simulation.js" charset="utf-8"></script>
+  <script src="class/robot.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <body>
+    <nav id="nav" class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand nb" href="https://github.com/pitther/" target="_blank">Vacuum <sub style="font-size: 15px; opacity: .2">@peter.ovseychuk</sub></a>
+    </nav>
+    <div id="container">
+    <div id="canvas-container"></div>
+    <br>
+    <div class="" data-toggle="buttons">
+      <label id="btn-fix" class="btn btn-lg btn-success active">
+               <input  type="radio" name="options" id="option1" onchange="settings_set('start')" autocomplete="off" checked>
+               <i class="fa fa-check"></i> Start
+      </label>
+      <label id="btn-fix" class="btn btn-lg btn-danger">
+               <input type="radio" name="options" id="option2" onchange="settings_set('start')" autocomplete="off" >
+               <i class="fa fa-warning"></i> Stop
+      </label>
+    </div>
+
+    <div id="settings">
+      <div class="container">
+        <h2></h2>
+        <table class="table" id="table-width-fix">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody id="table-info">
+          </tbody>
+        </table>
+      </div>
+      <div class="settings-container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-40" id="settings-row">
+            <div class="panel panel-default" id="panel-no-shadow">
+              <!-- Default panel contents -->
+              <!-- List group -->
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Grid
+                  <div class="material-switch pull-right">
+                    <input id="settings-grid"  name="someSwitchOption001" onchange="settings_set(1)" type="checkbox"/>
+                    <label for="settings-grid" class="label-success"></label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Enable robot trace
+                  <div class="material-switch pull-right">
+                    <input id="settings-trace"  name="someSwitchOption001" onchange="settings_set('trace')" type="checkbox"/>
+                    <label for="settings-trace" class="label-success"></label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  FPS
+                  <div class="range range-success">
+                    <input type="range" name="range" min="1" max="60" value="15" onmousemove="rangeSuccess.value=value;settings_set('fps')">
+                    <output id="rangeSuccess">15</output>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <button type="button" class="btn btn-success" onclick="settings_set('p')">P-algorithm</button>
+        <button type="button" class="btn btn-warning" onclick="settings_set('s')">Square-algorithm </button>
+        <button type="button" class="btn btn-info" onclick="settings_set('pp')">RandomPointer-algorithm</button>
+        <button type="button" class="btn btn-danger" onclick="settings_set('fr')">FullRandom-algorithm</button>
+          <p></p>
+          <p></p><i>P AVG x2000 = 4.7 junk</i>
+          <p></p><i>Square AVG x2000 = 5.19 junk</i>
+          <p></p><i>RandomPointerm AVG x2000 = 6.53 junk</i>
+          <p></p><i>FullRandom AVG x2000 = 16.95 junk</i>
+
+      </div>
+      <div class="container">
+
+        <h2></h2>
+        <table class="table" id="table-width-fix">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody id="table-info">
+          </tbody>
+        </table>
+      </div>
+      <div class="settings-container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-40" id="settings-row">
+            <div class="panel panel-default" id="panel-no-shadow">
+              <!-- Default panel contents -->
+              <!-- List group -->
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3 id="curr-alg">P-algprytm</h3>
+                </li>
+                <li class="list-group-item">
+                  <h4 id="curr-iter-num">Current simulation ()</h4>
+                </li>
+                <li class="list-group-item">
+                  Robot score
+                  <div id="curr-robot-score" class="material-switch pull-right"></div>
+                </li>
+                <li class="list-group-item">
+                  Junk left
+                  <div id="curr-junk-left" class="material-switch pull-right"></div>
+                </li>
+                <li class="list-group-item">
+                  <h4 id="prev-iter-num">Previous simulation ()</h4>
+                  <div class="material-switch pull-right">
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Robot score
+                  <div id="prev-robot-score" class="material-switch pull-right"></div>
+                </li>
+                <li class="list-group-item">
+                  Junk left
+                  <div id="prev-junk-left" class="material-switch pull-right"></div>
+                </li>
+                <li class="list-group-item">
+                  <h4 id="avg-iter-num">Average ()</h4>
+                  <div class="material-switch pull-right">
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Robot score
+                  <div id="avg-robot-score" class="material-switch pull-right"></div>
+                </li>
+                <li class="list-group-item">
+                  Junk left
+                  <div id="avg-junk-left" class="material-switch pull-right"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2></h2>
+        <table class="table" id="table-width-fix">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody id="table-info">
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="faviconBW.png" />
+    <title>Truth table</title>
+
+</head>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/tether.js"></script>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/patentesis.js"></script>
+<script src="js/script.js"></script>
+
+<body>
+
+<nav id="nav" class="navbar navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand nb" href="https://github.com/pitther/" target="_blank">Truth-table <sub style="font-size: 15px; opacity: .2">@peter.ovseychuk</sub></a>
+
+    <form class="form-inline " action="javascript:void(0);">
+        <input  autocomplete="off" style="" oninput="UI.onInput(this)"  id="inputExpression" class="form-control mr-sm-2" placeholder="Enter expression" aria-label="Make table">
+        <div id="invalidReasonDiv" class="invalid-tooltip"></div>
+        <div class="oper-container">
+            <div class="additional">
+                <button id="NOT" class="btn btn-outline-info  my-2 my-sm-0  opers" onclick="UI.clickOperations(this)">NOT</button>
+                <button id="AND" class="btn btn-outline-info  my-2 my-sm-0  opers" onclick="UI.clickOperations(this)">AND</button>
+                <button id="OR" class="btn btn-outline-info  my-2 my-sm-0  opers" onclick="UI.clickOperations(this)">OR</button>
+                <button id="IMPLY" class="btn btn-outline-info  my-2 my-sm-0  opers" onclick="UI.clickOperations(this)">IMP</button>
+                <button id="EQ" class="btn btn-outline-info my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">EQ</button>
+                <br>
+                <button id="XOR" class="btn btn-outline-info my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">XOR</button>
+                <button id="NAND" class="btn btn-outline-info my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">NAND</button>
+                <button id="NOR" class="btn btn-outline-info my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">NOR</button>
+                <div class="lbrb">
+                    <button id="lb" class="btn btn-outline-primary my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">(</button>
+                    <button id="rb" class="btn btn-outline-primary my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">)</button>
+                    <button id="CLR" class="btn btn-outline-danger my-2 my-sm-0   opers" onclick="UI.clickOperations(this)">CLR</button>
+                </div>
+            </div>
+
+        </div>
+            <!--button class="btn btn-outline-success my-2 my-sm-0" onclick="UI.onMakeTable()">Make table</button-->
+    </form>
+
+    <form class="form-inline " action="javascript:void(0);">
+        <input id="tipInput" style="display: none" class="form-control mr-sm-2">
+        <div id="tipDiv" class="valid-tooltip">123</div>
+        <button class="btn btn-outline-info my-2 my-sm-0 sets" id="qmark" onclick="UI.onHint()">?</button>
+        <button style="" id="customizationButton" class="btn btn-outline-warning my-2 my-sm-0 sets" onclick="UI.onCustomization()">Settings</button>
+
+        <button id="themeButton" class="btn btn-outline-info my-2 my-sm-0" onclick="UI.onChangeTheme()">Light theme</button>
+    </form>
+
+    <!--form class="form-inline " action="javascript:void(0);">
+        <button id="openOperationsButton" class="btn btn-outline-info my-2 my-sm-0 sets" onclick="UI.onOpenOperations()">Operations</button>
+        <button id="NOT" class="btn btn-outline-info my-2 my-sm-0 sets opers" onclick="UI.clickOperations(NOT)">NOT</button>
+        <button id="AND" class="btn btn-outline-info my-2 my-sm-0 sets opers" onclick="UI.clickOperations(NOT)">AND</button>
+        <button id="OR" class="btn btn-outline-info my-2 my-sm-0 sets opers" onclick="UI.clickOperations(NOT)">OR</button>
+        <button id="IMPLY" class="btn btn-outline-info my-2 my-sm-0 sets opers" onclick="UI.clickOperations(NOT)">IMPLY</button>
+        <button id="EQ" class="btn btn-outline-info my-2 my-sm-0 sets opers" onclick="UI.clickOperations(NOT)">EQ</button>
+    </form-->
+    <!--a class="navbar-brand" href="#"><span style="font-size: 15px; color: darkgrey">@peterovseychuk</span></a-->
+
+    </div>
+
+
+</nav>
+
+<nav id="settingsNav" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <form class="form-inline" action="javascript:void(0);" id="settingsOpenedContainer">
+        <button style="" id="stepsButton" class="btn btn-outline-primary my-2 my-sm-0 sets" onclick="UI.onViewSteps()">Show steps</button>
+        <button style="display: none;" id="detailedOperationsButton" class="btn btn-outline-primary my-2 my-sm-0 sets" onclick="UI.onDetailed()">Detailed</button>
+        <button style="" id="replaceOperationsButton" class="btn btn-outline-warning my-2 my-sm-0 sets" onclick="UI.onReplaceOperations()">Namings</button>
+        <button style="" id="colorizeOperationsButton" class="btn btn-outline-warning my-2 my-sm-0 sets" onclick="UI.onColorizeOperations()">Decolorize</button>
+    </form>
+</nav>
+
+<div class="table-container">
+    <table id="table" class="table table-bordered table-dark"></table>
+</div>
+
+
+</body>
+</html>

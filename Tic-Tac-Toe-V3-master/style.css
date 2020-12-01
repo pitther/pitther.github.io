@@ -1,0 +1,329 @@
+body{
+	margin: 0;
+    -webkit-user-select: none;
+	cursor: default;
+	background: url(images/shattered.png);
+}
+
+.container{
+	width: 100%;
+	text-align: center;
+}
+
+
+
+#h1{
+	margin-bottom: 5px;
+	font-family: Courier sans serif;
+	font-size: 30px;
+	color: grey;
+}
+
+#restart {
+	color: rgb(204, 0, 0);
+	cursor: pointer;
+}
+
+#restart:hover{
+	color: red;
+}
+
+
+#restartText{
+padding-top: 10px;
+margin: 0;
+}
+
+#playersTurnDiv {
+	padding: 5px;
+	margin: 30px auto;
+	width: 500px;
+	background-color: #F0F0F0 ;
+	box-shadow: 0 4px 15px 2px rgba(0,0,0,0.35);
+	text-align: center;
+}
+
+
+#playersTurn {
+	padding-top: 0px;
+	font-family: Courier ;
+	font-size: 30px;
+	color: grey;
+	margin: 0;
+	
+}
+
+#buttonBackToMenu{
+	background-image: url(images/left-arrow.png);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	position: absolute;
+	left: -2px;
+	width: 31px;
+	height: 31px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	background-color: grey;
+	opacity: 0.4;
+}
+#buttonBackToMenu:hover{
+	opacity: 0.7;
+}
+#resetGame{
+	background-image: url(images/reload.png);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	position: absolute;
+	left: -2px;
+	width: 31px;
+	height: 31px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	background-color: grey;
+	opacity: 0.4;
+
+	margin-top: 33px;
+}
+
+#resetGame:hover{
+	opacity: 0.7;
+}
+
+
+#gameField{
+	margin-top: 0;
+	display: inline-block;
+	width: 360px;
+	height: 360px;
+	border: grey 1px solid;
+	box-shadow: 0 4px 15px 2px rgba(0,0,0,0.35);
+}
+
+#scoreCounter{
+	padding-top: 8%;
+	margin: 0 auto;
+	width: 100px;
+	height: 50px;
+	color: grey;
+	font-family: Courier;
+	font-size: 25px;
+}
+
+#hideField{
+	display: none;
+}
+
+#field_0, #field_1, #field_2, #field_3, #field_4, #field_5, #field_6, #field_7, #field_8 {
+	width: 118px;
+	height: 118px;
+	border: grey 1px solid;
+	background: #E0E0E0  ;
+}
+
+#field_0:hover, #field_1:hover, #field_2:hover, #field_3:hover, #field_4:hover, #field_5:hover, #field_6:hover, #field_7:hover, #field_8:hover {
+	background-color:#D8D8D8;
+	cursor: pointer;
+}
+
+
+
+#field_0 {
+	float: left;
+	float: top;
+}
+#field_1 {
+	float: left;
+}
+#field_2 {
+	float: left;
+}
+#field_3, #field_4, #field_5 {
+	position: absolute;
+	margin-top: 120px;
+}
+
+#field_4{
+	margin-left: 120px;
+}
+
+#field_5{
+	margin-left: 240px;
+}
+
+#field_6, #field_7, #field_8{
+	position: absolute;
+	margin-top: 240px;
+}
+
+#field_6{
+
+}
+
+#field_7{
+	margin-left: 120px;
+}
+
+#field_8{
+	margin-left: 240px;
+}
+
+#dialog-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	margin: 0 auto;
+	transition: opacity 0.2s ease-in;
+}
+
+#dialog {
+	width: 400px;
+	height: 400px;
+	margin: 7% auto;
+	background-color: #F8F8F8;
+	box-shadow: 0 4px 15px 2px rgba(0,0,0,0.35);
+	border: 20px solid transparent;
+	transition: transform 0.2s ease-out;
+}
+
+#dialog-h1 {
+	font-size: 60px;
+    line-height: 1.0556;
+    font-weight: 100;
+    letter-spacing: -0.024em;
+    font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-shadow: white -1px 1px;
+    color: #333;
+}
+
+#inner-dialog-text {
+	font-size: 25px;
+	letter-spacing: -0.024em; 
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+
+#description-div{
+	margin-top: 0;
+}
+
+#description {
+	font-size: 20px;
+	letter-spacing: 0.01em; 
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+	color: #333;
+}
+
+
+#PVPbutton{
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 90px;
+	height: 30px;
+	background-color: #333;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: scale(0.95);
+}
+
+#PVEbutton{
+	margin-top: 10px;
+	margin-left: 20px;
+    float: left;
+	width: 90px;
+	height: 30px;
+	background-color: #333;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#PVPtext{
+	display: block;
+	padding-top: 4px;
+	color: white;
+	font-size: 20px;
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+#PVEtext{
+	display: block;
+	padding-top: 4px;
+	color: white;
+	font-size: 20px;
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+#startButton{
+	margin: 60px auto;
+	margin-bottom: 40px;
+	width: 200px;
+	height: 50px;
+	background-color: #333;
+	text-align: center;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	transition: transform 0.1s ease, box-shadow 0.1s ease-in;
+}
+
+#startButton:active{
+ 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transform: scale(0.97);
+	background-color: 	#404040 ;
+}
+
+#innerButtonText{
+	-webkit-user-select: none;
+	padding-top: 3px;
+}
+
+#start{
+	color: white;
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-size: 40px;
+	text-shadow: none;
+}
+
+#helper{
+	letter-spacing: -0.03em;
+	color :#D8D8D8;
+	float: left;
+}
+
+
+#soc-div{
+	float: right;
+	height: 30px;
+}
+#twitter-icon {
+	width: 30px;
+	height: 30px;	
+}
+#vk-icon{
+	width: 30px;
+	height: 30px;
+}
+
+#creator{
+
+}
+
+#creatorDiv{
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+	margin-top: 5px;
+	float:left;
+}
+
+#player{
+	color: rgb(204, 0, 0);
+}
+
+#alfa{
+	font-size: 10px;
+	color: yellow;
+}
