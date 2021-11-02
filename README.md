@@ -1,23 +1,22 @@
-### pitther.github.io
-### Some of my very old pet-projects 
+# Some of my very old pet-projects 
 
-# Tic Tac Toe
+## Tic Tac Toe
 [Live Preview](https://pitther.github.io/Tic-Tac-Toe-V3-master/)
 ![Preview](/tictactoe.png)
 ![Preview](/tictactoe2.png)
 
-# Vacuum cleaner algorithm
+## Vacuum cleaner algorithm
 [Live Preview](https://pitther.github.io/vacuum-master/)
 ![Preview](/vacuum.png)
 
-# Graph (adjacency, incidence tables)
+## Graph (adjacency, incidence tables)
 [Live Preview](https://pitther.github.io/graph-master/public/)
 ![Preview](/graph.png)
 
-# Checkers
+## Checkers
 [Live Preview](https://pitther.github.io/Checkers-master/checkers.html)
 ![Preview](/checkers.png)
 
-# Roulette
+## Roulette
 [Live Preview](https://pitther.github.io/roulette-master/)
 ![Preview](/roulette.png)
