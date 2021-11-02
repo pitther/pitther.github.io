@@ -4,6 +4,7 @@
 # Tic Tac Toe
 [Live Preview](https://pitther.github.io/Tic-Tac-Toe-V3-master/)
 ![Preview](/tictactoe.png)
+![Preview](/tictactoe2.png)
 
 # Vacuum cleaner algorithm
 [Live Preview](https://pitther.github.io/vacuum-master/)
